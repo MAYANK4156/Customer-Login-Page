@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Customer Login</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
+
+        /* Background Image Container */
+
+        .bg-img {
+            min-height: 100vh;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.65)
+                ),
+                url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Login Container */
+
+        .container {
+            width: 400px;
+
+            padding: 40px;
+
+            position: relative;
+            left: 0;
+            top: 0;
+
+            background: rgba(255, 255, 255, 0.12);
+
+            backdrop-filter: blur(15px);
+
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.5);
+
+            color: white;
+        }
+
+        /* Title */
+
+        h1 {
+            text-align: center;
+
+            margin-bottom: 10px;
+
+            font-size: 38px;
+
+            color: #f8d477;
+
+            -webkit-text-stroke: 1px #fff;
+
+            text-shadow:
+                0 0 10px rgba(248, 212, 119, 0.5);
+
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            text-align: center;
+
+            color: #eeeeee;
+
+            margin-bottom: 30px;
+
+            font-size: 14px;
+        }
+
+        /* Form Labels */
+
+        label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 14px;
+
+            color: #f5f5f5;
+        }
+
+        /* Input Fields */
+
+        input[type="text"],
+        input[type="password"] {
+
+            width: 100%;
+
+            padding: 14px 16px;
+
+            margin-bottom: 20px;
+
+            border: none;
+
+            outline: none;
+
+            border-radius: 10px;
+
+            background: rgba(255, 255, 255, 0.9);
+
+            color: #222;
+
+            font-size: 15px;
+
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+
+            background: white;
+
+            box-shadow:
+                0 0 0 3px rgba(248, 212, 119, 0.4);
+
+            transform: scale(1.02);
+        }
+
+        /* Remember Me */
+
+        .remember {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-bottom: 25px;
+
+            font-size: 13px;
+        }
+
+        .remember input {
+            accent-color: #f8d477;
+        }
+
+        /* Login Button */
+
+        button {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #b8860b,
+                    #f8d477,
+                    #b8860b
+                );
+
+            background-size: 200%;
+
+            color: #211800;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.4s;
+
+            box-shadow:
+                0 5px 20px rgba(248, 212, 119, 0.25);
+        }
+
+        button:hover {
+
+            background-position: right;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 30px rgba(248, 212, 119, 0.5);
+        }
+
+        /* Bottom Text */
+
+        .signup {
+
+            text-align: center;
+
+            margin-top: 25px;
+
+            font-size: 14px;
+
+            color: #ddd;
+        }
+
+        .signup a {
+
+            color: #f8d477;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .signup a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hotel Logo */
+
+        .hotel-logo {
+
+            text-align: center;
+
+            font-size: 18px;
+
+            letter-spacing: 4px;
+
+            color: #f8d477;
+
+            margin-bottom: 20px;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: 90%;
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Background Image -->
+
+    <div class="bg-img">
+
+        <!-- Login Form Container -->
+
+        <div class="container">
+
+            <div class="hotel-logo">
+                ✦ GRAND PALACE ✦
+            </div>
+
+            <h1>Welcome</h1>
+
+            <p class="subtitle">
+                Customer Login
+            </p>
+
+            <form>
+
+                <label for="username">
+                    Username / Email
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                >
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <div class="remember">
+
+                    <input
+                        type="checkbox"
+                        id="remember"
+                    >
+
+                    <label for="remember">
+                        Remember me
+                    </label>
+
+                </div>
+
+                <button type="submit">
+                    LOGIN
+                </button>
+
+            </form>
+
+            <div class="signup">
+                Don't have an account?
+                <a href="#">Create Account</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
